@@ -320,7 +320,10 @@ with tab4:
 
             # Plot the scatter points and add text labels
             for height, count in jumping_height_counts.items():
-                ax_4.text(height, 0.2, f"{count} people", ha='center', va='center', fontsize=12)
+                if (count > 1):
+                    ax_4.text(height, 0.2, f"{count} people", ha='center', va='center', fontsize=12)
+                else:
+                    ax_4.text(height, 0.2, f"{count} person", ha='center', va='center', fontsize=12)
             ax_4.grid(False)
             ax_4.set_yticks([])
             ax_4.set_xlabel("Jumping Length (m)")
