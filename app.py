@@ -308,7 +308,7 @@ with tab4:
             # Jumping plot
             fig_4, ax_4 = plt.subplots()
             img = plt.imread("./assets/Jump.png")
-            ax_4.imshow(img,extent=[1, 2.5, 0, 0.7])
+            ax_4.imshow(img,extent=[1, 2.2, 0, 0.7])
             ax_4.scatter(scored_df['Power Standing Jump'], [0.25 for i in range(len(scored_df['Power Standing Jump']))],s=100,color="#fc4f30")
             # Count the number of observations for each jumping height
             jumping_height_counts = {}
@@ -321,9 +321,9 @@ with tab4:
             # Plot the scatter points and add text labels
             for height, count in jumping_height_counts.items():
                 if (count > 1):
-                    ax_4.text(height, 0.2, f"{count} people", ha='center', va='center', fontsize=12)
+                    ax_4.text(height, 0.2, f"{count} \n people", ha='center', va='center', fontsize=12)
                 else:
-                    ax_4.text(height, 0.2, f"{count} person", ha='center', va='center', fontsize=12)
+                    ax_4.text(height, 0.2, f"{count} \n person", ha='center', va='center', fontsize=12)
             ax_4.grid(False)
             ax_4.set_yticks([])
             ax_4.set_xlabel("Jumping Length (m)")
